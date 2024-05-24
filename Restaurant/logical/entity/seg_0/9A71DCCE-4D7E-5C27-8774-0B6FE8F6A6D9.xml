@@ -1,0 +1,186 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="9A71DCCE-4D7E-5C27-8774-0B6FE8F6A6D9" name="ANGAJAT">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-11-25 09:06:50 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<engineerTo>
+<item key="69C75726-FA12-999F-7258-1DA416DD0A78" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Id_angajat" id="786669D2-B445-37F4-7797-BD55A43B7F44">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-11-25 09:07:07 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<engineerTo>
+<item key="69C75726-FA12-999F-7258-1DA416DD0A78" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nume_angajat" id="0B08C18A-199E-C0ED-793C-13669EC59B87">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-11-25 09:08:24 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<engineerTo>
+<item key="69C75726-FA12-999F-7258-1DA416DD0A78" value="true"/>
+</engineerTo>
+<constraintName>Nume_angajat_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="regexp_like(Nume_angajat,&apos;^[A-Za-z&apos;&apos;-]+$&apos;) and length(Nume_angajat)&gt;1"/>
+</checkConstraint>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Prenume_angajat" id="1814543F-816C-E09A-F092-FE2157DF0728">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-11-25 09:09:17 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<engineerTo>
+<item key="69C75726-FA12-999F-7258-1DA416DD0A78" value="true"/>
+</engineerTo>
+<constraintName>Prenume_angajat_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="regexp_like(Prenume_angajat,&apos;^[A-Za-z&apos;&apos;-]+$&apos;) and length(Prenume_angajat)&gt;1"/>
+</checkConstraint>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CNP_angajat" id="858A8B01-83F7-18D0-D474-F2754932C664">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-11-25 09:07:53 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<engineerTo>
+<item key="69C75726-FA12-999F-7258-1DA416DD0A78" value="true"/>
+</engineerTo>
+<constraintName>CNP_angajat_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>13</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(CNP_angajat)=13"/>
+</checkConstraint>
+<ownDataTypeParameters>,13,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Telefon_angajat" id="B0057BFA-EEC2-6D2B-D05A-7C13DC23BCF9">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-11-25 09:09:45 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<engineerTo>
+<item key="69C75726-FA12-999F-7258-1DA416DD0A78" value="true"/>
+</engineerTo>
+<constraintName>Telefon_angajat_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="regexp_like(Telefon_angajat, &apos;^([0-9]){10}$&apos;)
+"/>
+</checkConstraint>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Functie" id="27D47895-C199-A0EC-824F-E3B14D4D49A7">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-11-25 09:10:47 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<engineerTo>
+<item key="69C75726-FA12-999F-7258-1DA416DD0A78" value="true"/>
+</engineerTo>
+<constraintName>ANGAJAT_Functie_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="(regexp_like(Functie,&apos;^[A-Za-z&apos;&apos;-]+$&apos;)) and (length(Functie)&gt;1)"/>
+</checkConstraint>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id_restaurant" id="1451ED15-7F2B-BFC6-9E84-CA23C59BF91A">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-02 11:43:54 UTC</createdTime>
+<generatorID>6F003648-5E25-672D-6BB2-EE751AB00AD0</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<engineerTo>
+<item key="69C75726-FA12-999F-7258-1DA416DD0A78" value="true"/>
+</engineerTo>
+<referedAttribute>FC17BDBF-095B-15FB-699B-3C8FACF0D35C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Data_nastere_angajat" id="D4ED5498-D943-B9C0-CB49-A234750E4D1C">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-02 11:54:31 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<engineerTo>
+<item key="69C75726-FA12-999F-7258-1DA416DD0A78" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Adresa_angajat" id="E004B879-6FD5-6F10-C271-2E7CAB7E24E2">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-11-25 09:10:19 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<engineerTo>
+<item key="69C75726-FA12-999F-7258-1DA416DD0A78" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="4AA7705B-3F4E-9AB0-21F1-AF67FFE2D380" name="ANGAJAT PK">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-11-25 09:07:46 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<engineerTo>
+<item key="69C75726-FA12-999F-7258-1DA416DD0A78" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<newElementsIDs>786669D2-B445-37F4-7797-BD55A43B7F44</newElementsIDs>
+<usedAttributes>
+<attributeRef>786669D2-B445-37F4-7797-BD55A43B7F44</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="2551DB00-7FA1-A31C-BDB7-305C87604989" name="Angajat_CNP_angajat_UN">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-11-25 09:14:48 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<engineerTo>
+<item key="69C75726-FA12-999F-7258-1DA416DD0A78" value="true"/>
+</engineerTo>
+<newElementsIDs>858A8B01-83F7-18D0-D474-F2754932C664</newElementsIDs>
+<usedAttributes>
+<attributeRef>858A8B01-83F7-18D0-D474-F2754932C664</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

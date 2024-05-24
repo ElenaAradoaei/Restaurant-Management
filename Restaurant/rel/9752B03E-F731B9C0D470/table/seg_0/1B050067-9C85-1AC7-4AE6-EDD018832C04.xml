@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1B050067-9C85-1AC7-4AE6-EDD018832C04" name="SALA">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<generatorID>C766C4DD-45AF-6431-965C-109145741CA7</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id_sala" id="9493619C-EC3A-4DE2-C58E-0523F770CF72">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<generatorID>22FFC05B-5241-39C5-9A91-3FA578B52DCF</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementGenerateTrigger>false</autoIncrementGenerateTrigger>
+</Column>
+<Column name="Nr_locuri" id="105FA3CC-8A76-36EF-9467-2FA0450401DF">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<generatorID>E48E8851-69AD-60F6-0363-AC7AD53FDE88</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<constraintName>Nr_locuri_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="Nr_locuri&gt;10"/>
+</checkConstraint>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Pret_sala" id="8A123D85-33A2-166D-8C24-0DDAE6AEA8E9">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<generatorID>B6F89AD6-FA73-3DB0-37DB-BEF6A864F49A</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<constraintName>Pret_sala_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="Pret_sala&gt;0"/>
+</checkConstraint>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Id_restaurant" id="A411089C-50A1-ABC9-EE68-A724C0817E25">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<generatorID>71C5AB9D-54E3-4C0C-69B8-35E92FBBE06F</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DF40C681-09A4-720F-FF1F-F0888B2A1D77" referredColumn="3F58ED89-F901-3EEB-3E59-E625CF0F26B5"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A9EBE2D2-AAB3-8EA1-8717-1170550B9C25" name="SALA_PK">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<generatorID>5F416C5B-DB43-454F-98E2-9BAF70D11DA4</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9493619C-EC3A-4DE2-C58E-0523F770CF72"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8645DAEA-5DBB-8671-5D14-11D26E991646" name="restaurant_sala_fk">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<generatorID>EA7D695F-EE32-2CC1-FEAE-EDA80AC91133</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A411089C-50A1-ABC9-EE68-A724C0817E25"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

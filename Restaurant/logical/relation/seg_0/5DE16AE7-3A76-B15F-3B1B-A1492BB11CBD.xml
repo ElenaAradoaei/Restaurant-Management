@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="angajat_angEv_fk" directorySegmentName="seg_0" id="5DE16AE7-3A76-B15F-3B1B-A1492BB11CBD">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-02 11:40:50 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<engineerTo>
+<item key="8CB57D4E-FFD1-B069-CE7A-E529D7365E03" value="true"/>
+</engineerTo>
+<sourcePk>4AA7705B-3F4E-9AB0-21F1-AF67FFE2D380</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>este alocat</nameOnSource>
+<nameOnTarget>are alocat </nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>9A71DCCE-4D7E-5C27-8774-0B6FE8F6A6D9</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>6418A8EA-A242-6E64-EDBE-49B575A1BDB9</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

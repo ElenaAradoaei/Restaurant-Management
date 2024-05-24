@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="CLIENT" directorySegmentName="seg_0" id="7CF8C4FD-CAC7-0037-7A62-4204B12F7B0F">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 11:44:42 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="Prenume_client" id="0883740B-3D6F-48D6-6024-E801CAE4A9AD">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 11:44:42 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Data_nastere_client" id="885E62CB-439C-ED7C-6EC2-1DEC95BBB212">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 11:44:42 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Id_client" id="A2882B3B-A023-7D93-2D0C-D36483FBF514">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 11:44:42 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+<notnullConstraintnameChanged>true</notnullConstraintnameChanged>
+</ColumnProxy>
+<ColumnProxy name="Nume_client" id="AF2BE0B0-42DD-1064-704D-A9E614207212">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 11:44:42 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Telefon_client" id="BF8067AE-AB9D-1059-C9B0-E0366889E4A2">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 11:44:42 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CNP_client" id="C193EE05-CD97-4289-99AD-5A69143B1EE6">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 11:44:42 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="CLIENT_PK" id="12C39232-13A4-21AE-5639-C13223930952">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 11:44:42 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="Client_CNP_client_UN" id="AF5468BA-86C4-FEB5-6AB4-EA82C06BE1E9">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 11:44:42 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev12c>

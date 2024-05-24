@@ -1,0 +1,43 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="ANGAJATI_PER_EVENIMENT" directorySegmentName="seg_0" id="3C0BA7D9-E79D-BBF5-5A65-7E373C1605CD">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 11:44:42 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="Id_angajat" id="647FD652-9021-B558-A60A-1634A2263B3A">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 11:44:42 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Id_eveniment" id="9698E76D-0311-B768-F7F5-A56529BF7CF8">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 11:44:42 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="eveniment_angEv_fk" id="CA68F1C5-8840-B306-B1A2-2E7CCABE615B">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 11:44:42 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="angajat_angEv_fk" id="FED762BC-7600-DAB8-2DA3-6D4E5EAF817D">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 11:44:42 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="ANGAJATI_PER_EVENIMENT_PK" id="203C08A5-A3D8-95BD-B98A-AE785FCE8505">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 11:44:42 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

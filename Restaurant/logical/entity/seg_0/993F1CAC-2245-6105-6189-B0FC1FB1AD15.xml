@@ -1,0 +1,152 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="993F1CAC-2245-6105-6189-B0FC1FB1AD15" name="EVENIMENT">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-11-25 09:01:27 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<engineerTo>
+<item key="14162682-AC55-53B2-D32F-A2BFFADC7710" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Id_eveniment" id="4504A7A3-7E5A-0768-1768-4AE193893E32">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-11-25 09:01:49 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<engineerTo>
+<item key="14162682-AC55-53B2-D32F-A2BFFADC7710" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Data_eveniment" id="82EF2976-C369-BDA7-B2DF-AE5C26F16447">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-11-25 09:02:22 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<engineerTo>
+<item key="14162682-AC55-53B2-D32F-A2BFFADC7710" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nr_persoane" id="5B5B6BB4-3E78-C978-8217-B60A11BDF979">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-11-25 09:03:30 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<engineerTo>
+<item key="14162682-AC55-53B2-D32F-A2BFFADC7710" value="true"/>
+</engineerTo>
+<constraintName>Nr_persoane_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="Nr_persoane&gt;10"/>
+</checkConstraint>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nume_eveniment" id="CC0C0687-C2C1-ADD0-C8A4-204856B70E0F">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-11-25 09:04:17 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<engineerTo>
+<item key="14162682-AC55-53B2-D32F-A2BFFADC7710" value="true"/>
+</engineerTo>
+<constraintName>Nume_eveniment_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="regexp_like(Nume_eveniment,&apos;^[A-Za-z&apos;&apos;-]+$&apos;) and length(Nume_eveniment)&gt;1"/>
+</checkConstraint>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Pret_eveniment" id="6EFA1003-777E-BF45-05B0-982A24CDF994">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-11-25 09:05:02 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<engineerTo>
+<item key="14162682-AC55-53B2-D32F-A2BFFADC7710" value="true"/>
+</engineerTo>
+<constraintName>Pret_eveniment_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="Pret_eveniment&gt;0"/>
+</checkConstraint>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id_client" id="A4D050DF-302B-2E60-DE5A-46DE9120A187">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-02 11:38:04 UTC</createdTime>
+<generatorID>023FC110-165C-DF66-70B1-18F39935EBC5</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<engineerTo>
+<item key="14162682-AC55-53B2-D32F-A2BFFADC7710" value="true"/>
+</engineerTo>
+<referedAttribute>4F07F1FD-F05D-1E82-EC98-E28BE2EFD613</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id_sala" id="973D3982-4DAD-D836-F8F2-0D0AF7FED42F">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-02 11:40:24 UTC</createdTime>
+<generatorID>AE9A1E9C-AD4C-DDB7-8CEC-2C33CE2C9994</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<engineerTo>
+<item key="14162682-AC55-53B2-D32F-A2BFFADC7710" value="true"/>
+</engineerTo>
+<referedAttribute>22FFC05B-5241-39C5-9A91-3FA578B52DCF</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="360620D4-3356-B066-F510-5C1F2F326C8C" name="EVENIMENT PK">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-11-25 09:02:06 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<engineerTo>
+<item key="14162682-AC55-53B2-D32F-A2BFFADC7710" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>4504A7A3-7E5A-0768-1768-4AE193893E32</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="05AA0DE7-4138-CC74-BBC6-71D534A40ACC" name="Eveniment_data_sala_UK">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-02 15:17:53 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<engineerTo>
+<item key="14162682-AC55-53B2-D32F-A2BFFADC7710" value="true"/>
+</engineerTo>
+<newElementsIDs>AE9A1E9C-AD4C-DDB7-8CEC-2C33CE2C9994,82EF2976-C369-BDA7-B2DF-AE5C26F16447</newElementsIDs>
+<usedAttributes>
+<attributeRef>973D3982-4DAD-D836-F8F2-0D0AF7FED42F</attributeRef>
+<attributeRef>82EF2976-C369-BDA7-B2DF-AE5C26F16447</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

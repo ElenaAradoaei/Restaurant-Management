@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6418A8EA-A242-6E64-EDBE-49B575A1BDB9" name="ANGAJATI PER EVENIMENT">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-11-25 09:19:21 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<engineerTo>
+<item key="C9D201E3-1829-A4C6-8550-93D455193D7D" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Id_angajat" id="5855329A-A482-072B-5057-9C96EEA97B29">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-02 11:40:50 UTC</createdTime>
+<generatorID>5DE16AE7-3A76-B15F-3B1B-A1492BB11CBD</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<engineerTo>
+<item key="C9D201E3-1829-A4C6-8550-93D455193D7D" value="true"/>
+</engineerTo>
+<referedAttribute>786669D2-B445-37F4-7797-BD55A43B7F44</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id_eveniment" id="AD6F3BCD-F575-4DBF-3AE6-2624803C47BB">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-02 12:03:49 UTC</createdTime>
+<generatorID>100B5C12-1B1C-D19B-7443-2FB0653E57B3</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<engineerTo>
+<item key="C9D201E3-1829-A4C6-8550-93D455193D7D" value="true"/>
+</engineerTo>
+<referedAttribute>4504A7A3-7E5A-0768-1768-4AE193893E32</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="05274998-DD92-E5BE-6F49-DA93EA151C97" name="ANGAJATI PER EVENIMENT PK">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-02 11:38:51 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<engineerTo>
+<item key="C9D201E3-1829-A4C6-8550-93D455193D7D" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>5855329A-A482-072B-5057-9C96EEA97B29</attributeRef>
+<attributeRef>AD6F3BCD-F575-4DBF-3AE6-2624803C47BB</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

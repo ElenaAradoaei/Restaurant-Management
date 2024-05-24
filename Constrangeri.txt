@@ -1,0 +1,384 @@
+regexp_like(studentfname,'^[A-Za-z''-]+$')
+
+regexp_like(studentfname,'^[0-9''-]+$')
+
+regexp_like(Telefon_client,'^[0][:7:3:2][0-9 ]*$')
+
+
+BEGIN
+	IF( :new.Data_eveniment <= SYSDATE )
+	THEN
+		RAISE_APPLICATION_ERROR( -20001, 'Data invalida: ' || TO_CHAR( :new.Data_eveniment, 'DD.MM.YYYY HH24:MI:SS' ) || ' trebuie sa fie mai mare decat data curenta.' );
+	END IF;
+END;
+
+
+
+BEGIN
+	IF( :new.Data_nastere_angajat >= TO_DATE('2004-12-01', 'yyyy-mm-dd' ))
+	THEN
+		RAISE_APPLICATION_ERROR( -20001, 'Data invalida: ' || TO_CHAR( :new.Data_nastere_angajat, 'DD.MM.YYYY HH24:MI:SS' ) || ' trebuie sa fie mai mica decat 2004-12-01 pentru ca angajatul sa aiba peste 18 ani.' );
+	END IF;
+END;
+
+
+BEGIN
+	IF( :new.Data_nastere_client >= TO_DATE('2004-12-01', 'yyyy-mm-dd' ))
+	THEN
+		RAISE_APPLICATION_ERROR( -20001, 'Data invalida: ' || TO_CHAR( :new.Data_nastere_client, 'DD.MM.YYYY HH24:MI:SS' ) || ' trebuie sa fie mai mica decat 2004-12-01 pentru a fi clientul major.' );
+	END IF;
+END;
+
+
+
+ALTER TABLE sala
+DROP CONSTRAINT restaurant_sala_fk;
+ALTER TABLE eveniment
+DROP CONSTRAINT sala_eveniment_fk;
+ALTER TABLE angajati_Per_Eveniment
+DROP CONSTRAINT eveniment_angEv_fk;
+ALTER TABLE angajati_Per_Eveniment
+DROP CONSTRAINT angajat_angEv_fk;
+ALTER TABLE angajat
+DROP CONSTRAINT restaurant_angajat_fk;
+
+drop table eveniment;
+drop table sala;
+drop table restaurant;
+drop table angajat;
+drop table angajati_per_eveniment;
+drop table client;
+
+
+
+insert into restaurant(nume_restaurant, adresa_restaurant, telefon_restaurant, nr_sali) 
+values ('Manhattan', 'Drumul Odaii, Nr. 34-36, Otopeni', '0728808029', 4);
+
+insert into restaurant(nume_restaurant, adresa_restaurant, telefon_restaurant, nr_sali) 
+values ('Magic Ballroom', 'Strada Erou Iancu Nicolae 84', '0729895971', 5);
+
+insert into restaurant(nume_restaurant, adresa_restaurant, telefon_restaurant, nr_sali) 
+values ('Americano', 'Soseaua Linia de centura, Voluntari', '0731124389', 2);
+
+insert into restaurant(nume_restaurant, adresa_restaurant, telefon_restaurant, nr_sali) 
+values ('Polizu', 'Str. Sf. Gheorghe 9, Afumați', '0749530238', 3);
+
+select * from restaurant;
+
+
+
+
+insert into angajat(nume_angajat, prenume_angajat, cnp_angajat, telefon_angajat, 
+functie, id_restaurant, data_nastere_angajat, adresa_angajat) 
+values ('Punguta', 'Alexa', 6011267373112, '0725784638', 'ospatar', (select Id_restaurant from restaurant where nume_restaurant = 'Manhattan'),  DATE '2001-05-18', 
+'Aleea Prof. Vasile Petrescu, T19, Iasi');
+
+insert into angajat(nume_angajat, prenume_angajat, cnp_angajat, telefon_angajat, 
+functie, id_restaurant, data_nastere_angajat, adresa_angajat) 
+values ('Melisei', 'Geanina', 6021646737312, '0725712738', 'ospatar', (select Id_restaurant from restaurant where nume_restaurant = 'Manhattan'), DATE '2002-02-25', 
+'Strada Bucium 30, Iași');
+
+insert into angajat(nume_angajat, prenume_angajat, cnp_angajat, telefon_angajat, 
+functie, id_restaurant, data_nastere_angajat, adresa_angajat) 
+values ('Petrescu', 'Iustin', 1931234673732, '0782612738', 'barman', (select Id_restaurant from restaurant where nume_restaurant = 'Manhattan'), DATE '1993-03-06', 
+'Calea Chișinăului nr. 29, Iași');
+
+insert into angajat(nume_angajat, prenume_angajat, cnp_angajat, telefon_angajat, 
+functie, id_restaurant, data_nastere_angajat, adresa_angajat) 
+values ('Dobrescu', 'Emilian', 1986737312113, '0755712738', 'bucatar', (select Id_restaurant from restaurant where nume_restaurant = 'Manhattan'), DATE '1986-02-25', 
+'Strada Lascăr Catargi 50, Iași');
+
+insert into angajat(nume_angajat, prenume_angajat, cnp_angajat, telefon_angajat, 
+functie, id_restaurant, data_nastere_angajat) 
+values ('Ionescu', 'Antonio', 5010567373172, '0791873235', 'ospatar', (select Id_restaurant from restaurant where nume_restaurant = 'Manhattan'), DATE '2001-12-14');
+
+insert into angajat(nume_angajat, prenume_angajat, cnp_angajat, telefon_angajat, 
+functie, id_restaurant, data_nastere_angajat) 
+values ('Grecu', 'Alin', 5010567373142, '0792173235', 'ospatar', (select Id_restaurant from restaurant where nume_restaurant = 'Magic Ballroom'), DATE '2001-05-08');
+
+insert into angajat(nume_angajat, prenume_angajat, cnp_angajat, telefon_angajat, 
+functie, id_restaurant, data_nastere_angajat) 
+values ('Apostol', 'Andrei', 1952164673731, '0729183214', 'ospatar', (select Id_restaurant from restaurant where nume_restaurant = 'Magic Ballroom'), DATE '1995-02-25');
+
+insert into angajat(nume_angajat, prenume_angajat, cnp_angajat, telefon_angajat, 
+functie, id_restaurant, data_nastere_angajat, adresa_angajat) 
+values ('Craiu', 'Andreea', 2981212673732, '0702937491', 'barman', (select Id_restaurant from restaurant where nume_restaurant = 'Magic Ballroom'), DATE '1998-05-19', 
+'Strada Toma Cozma nr. 41, Iași');
+
+
+insert into angajat(nume_angajat, prenume_angajat, cnp_angajat, telefon_angajat, 
+functie, id_restaurant, data_nastere_angajat, adresa_angajat) 
+values ('Maftei', 'Codrin', 1921242312112, '0799221456', 'bucatar', (select Id_restaurant from restaurant where nume_restaurant = 'Magic Ballroom'), DATE '1992-09-01', 
+'Strada Lascăr Catargi 50, Iași');
+
+insert into angajat(nume_angajat, prenume_angajat, cnp_angajat, telefon_angajat, 
+functie, id_restaurant, data_nastere_angajat) 
+values ('Mihaila', 'Teodor', 1962164673731, '0729183214', 'bucatar', (select Id_restaurant from restaurant where nume_restaurant = 'Magic Ballroom'), DATE '1996-02-25');
+
+select* from angajat;
+
+
+
+insert into client(nume_client, prenume_client, cnp_client, telefon_client, data_nastere_client) 
+values ('Anghel', 'Maria', 2780615890123, '0789123623', DATE '1978-06-15');
+insert into client(nume_client, prenume_client, cnp_client, telefon_client, data_nastere_client) 
+values ('Ciur', 'Catalin', 1890712890113, '0722773623', DATE '1989-07-12');
+insert into client(nume_client, prenume_client, cnp_client, telefon_client, data_nastere_client) 
+values ('Ciubuc', 'Mihai', 1930429893247, '0798823623', DATE '1993-04-29');
+insert into client(nume_client, prenume_client, cnp_client, telefon_client, data_nastere_client) 
+values ('Gheorghian', 'Alina', 2810215890123, '0723643622', DATE '1981-02-15');
+insert into client(nume_client, prenume_client, cnp_client, telefon_client, data_nastere_client) 
+values ('Iancu', 'Cosmin', 1790119890325, '0789664623', DATE '1979-01-19');
+insert into client(nume_client, prenume_client, cnp_client, telefon_client) 
+values ('Popescu', 'Adrian', 1980323890325, '0783911623');
+insert into client(nume_client, prenume_client, cnp_client, telefon_client) 
+values ('Vasilescu', 'Stefan', 1810311890325, '0799237123');
+
+select * from client;
+
+
+insert into sala(nr_locuri, pret_sala, id_restaurant) 
+values (280, 2500, 1);
+insert into sala(nr_locuri, pret_sala, id_restaurant) 
+values (300, 3000, 1);
+insert into sala(nr_locuri, pret_sala, id_restaurant) 
+values (100, 1000, 1);
+insert into sala(nr_locuri, pret_sala, id_restaurant) 
+values (150, 1500, 1);
+insert into sala(nr_locuri, pret_sala, id_restaurant) 
+values (200, 1500, 2);
+insert into sala(nr_locuri, pret_sala, id_restaurant) 
+values (250, 2000, 2);
+insert into sala(nr_locuri, pret_sala, id_restaurant) 
+values (300, 2500, 2);
+
+select * from sala;
+
+
+insert into eveniment(data_eveniment, nr_persoane, nume_eveniment, pret_eveniment, id_client, id_sala) 
+values (DATE '2022-12-27', 60, 'Majorat', 15000, 3, 1);
+insert into eveniment(data_eveniment, nr_persoane, nume_eveniment, pret_eveniment, id_client, id_sala) 
+values (DATE '2024-07-29', 200, 'Nunta', 25000, 6, 5);
+insert into eveniment(data_eveniment, nr_persoane, nume_eveniment, pret_eveniment, id_client, id_sala) 
+values (DATE '2023-01-15', 100, 'Botez', 20000, 1, 4);
+insert into eveniment(data_eveniment, nr_persoane, nume_eveniment, pret_eveniment, id_client, id_sala) 
+values (DATE '2024-07-29', 250, 'Nunta', 30000, 2, 6);
+insert into eveniment(data_eveniment, nr_persoane, nume_eveniment, pret_eveniment, id_client, id_sala) 
+values (DATE '2023-05-29', 100, 'Banchet', 40000, 5, 6);
+insert into eveniment(data_eveniment, nr_persoane, nume_eveniment, pret_eveniment, id_client, id_sala) 
+values (DATE '2024-02-18', 40, 'Majorat', 8000, 4, 1);
+
+
+insert into angajati_per_eveniment(id_angajat, id_eveniment)
+values (1, 1);
+insert into angajati_per_eveniment(id_angajat, id_eveniment)
+values (2, 1);
+insert into angajati_per_eveniment(id_angajat, id_eveniment)
+values (3, 1);
+insert into angajati_per_eveniment(id_angajat, id_eveniment)
+values (4, 1);
+insert into angajati_per_eveniment(id_angajat, id_eveniment)
+values (6, 3);
+insert into angajati_per_eveniment(id_angajat, id_eveniment)
+values (7, 3);
+insert into angajati_per_eveniment(id_angajat, id_eveniment)
+values (8, 3);
+insert into angajati_per_eveniment(id_angajat, id_eveniment)
+values (4, 3);
+
+select * from angajati_per_eveniment;
+
+
+-- Verificare constrangeri
+
+-- Constrangere pt nr de telefon. Testez telefon_client in tabela CLIENT. Similar pentru telefon_angajat si telefon_restaurant.
+
+-- a) Testez sa fie doar cifre 
+insert into client(nume_client, prenume_client, cnp_client, telefon_client, data_nastere_client) 
+values ('Acornicesei', 'Andreea', 6020715890123, '099abs6123', DATE '1978-06-15');
+
+-- b) Testez sa aiba lungimea de 10 caractere
+insert into client(nume_client, prenume_client, cnp_client, telefon_client, data_nastere_client) 
+values ('Acornicesei', 'Andreea', 6020715890123, '07122396123', DATE '1978-06-15');
+
+-- Constrangere pentru nume. Testez nume_client in tabela CLIENT. Similar pentru  prenume_client, nume_eveniment, nume_restaurant, nume_angajat, prenume_angajat, functie.
+
+-- Testez sa aiba doar litere 
+insert into client(nume_client, prenume_client, cnp_client, telefon_client, data_nastere_client) 
+values ('999rnicesei', 'Andreea', 6020715890123, '0719612300', DATE '1978-06-15');
+
+-- Testez sa aiba cel putin 2 caractere
+insert into client(nume_client, prenume_client, cnp_client, telefon_client, data_nastere_client) 
+values ('A', 'Andreea', 6020715890123, '0719612300', DATE '1978-06-15');
+
+insert into client(nume_client, prenume_client, cnp_client, telefon_client, data_nastere_client) 
+values ('Acornicesei', 'Andreea', 6020715890123, '0712239623', DATE '1978-06-15');
+
+-- Constrangere pentru Nr_sali > 0, in tabela SALA. Similar  nr_locuri, nr_persoane, pret_eveniment, pret_sala
+insert into restaurant(nume_restaurant, adresa_restaurant, telefon_restaurant, nr_sali) 
+values ('Manhattan', 'Drumul Odaii, Nr. 34-36, Otopeni', '0728808029', 0);
+
+-- Constrangere pentru data_eveniment. Aceasta trebuie sa fie dupa SYSDATE.
+insert into eveniment(data_eveniment, nr_persoane, nume_eveniment, pret_eveniment, id_client, id_sala) 
+values (DATE '2022-12-01', 60, 'Majorat', 15000, 1, 1);
+
+-- Constrangere pentru Data_nastere_angajat. Trebuie aleasa astfel incat angajatul sa fie major (inainte de 2004-12-01). Similar Data_nastere_client
+insert into angajat(nume_angajat, prenume_angajat, cnp_angajat, telefon_angajat, 
+functie, id_restaurant, data_nastere_angajat) 
+values ('Apostol', 'Andrei', 102254673731, '0729183214', 'ospatar', 2, DATE '2005-02-25');
+
+-- Constrangere UNIQUE
+-- a) Testez pentru CNP_client. Similar CNP_angajat
+insert into client(nume_client, prenume_client, cnp_client, telefon_client, data_nastere_client) 
+values ('Anghel', 'Maria', 2780612290123, '0789123623', DATE '1978-06-15');
+insert into client(nume_client, prenume_client, cnp_client, telefon_client, data_nastere_client) 
+values ('Ciur', 'Catalin', 2780612290123, '0722773623', DATE '1989-07-12');
+
+-- b) Testez pentru (Id_sala, Data_eveniment) in tabela Eveniment
+insert into eveniment(data_eveniment, nr_persoane, nume_eveniment, pret_eveniment, id_client, id_sala) 
+values (DATE '2025-12-27', 60, 'Majorat', 15000, 1, 1);
+insert into eveniment(data_eveniment, nr_persoane, nume_eveniment, pret_eveniment, id_client, id_sala) 
+values (DATE '2025-12-27', 200, 'Nunta', 50000, 2, 1);
+
+
+
+
+-- Select clientul care organizeaza evenimentul
+select c.id_client, c.nume_client, c.prenume_client, c.telefon_client, e.nume_eveniment
+    from client c JOIN eveniment e on
+        e.id_client = c.id_client
+    where e.id_eveniment = '2';
+    
+-- Select clienti care arganizeaza NUNTA
+select  e.nume_eveniment, c.id_client, c.nume_client, c.prenume_client, c.telefon_client
+    from client c JOIN eveniment e on
+        e.id_client = c.id_client
+    where e.nume_eveniment = 'Nunta';
+    
+-- Select clienti care organizeaza evenimente in anul 2024
+select  e.data_eveniment, e.nume_eveniment, c.id_client, c.nume_client, c.prenume_client, c.telefon_client
+    from client c JOIN eveniment e on
+        e.id_client = c.id_client
+    where e.data_eveniment BETWEEN to_date('01.01.2024', 'DD.MM.YYYY') AND to_date('31.12.2024', 'DD.MM.YYYY');
+    
+    
+-- Selectare angajati asignati evenimentului cu id_eveniment = 3
+select e.id_eveniment, a.id_angajat, a.nume_angajat, a.prenume_angajat, a.functie, e.data_eveniment, e.nume_eveniment
+    from angajat a JOIN angajati_per_eveniment ae ON
+        a.id_angajat = ae.id_angajat
+    LEFT JOIN eveniment e ON
+        ae.id_eveniment = e.id_eveniment
+    where ae.id_eveniment = 3;
+
+    
+-- Select evenimente din restaurantul 1 in anul 2013
+select r.id_restaurant, e.id_sala, e.nume_eveniment, e.data_eveniment, e.nr_persoane    
+    from eveniment e JOIN sala s ON
+        s.id_sala = e.id_sala
+    LEFT JOIN restaurant r ON
+        r.id_restaurant = s.id_restaurant
+    where r.id_restaurant = 1 and e.data_eveniment BETWEEN to_date('01.01.2023', 'DD.MM.YYYY') AND to_date('31.12.2023', 'DD.MM.YYYY');
+    
+    
+-- Selectare sali din restaurantul cu id_restaurant x
+select id_sala, nr_locuri, pret_sala from sala
+    where id_restaurant = 2;
+
+-- Selectare angajati care lucreaza la restaurantul cu id_restaurant x
+select a.id_angajat, a.nume_angajat, a.telefon_angajat 
+    from restaurant r, angajat a
+    where r.id_restaurant = a.id_restaurant and r.id_restaurant = 1;
+
+-- Select costul total pe care il suporta clientul (pret_sala + pret_eveniment)
+select c.id_client, c.nume_client, c.prenume_client, s.pret_sala, e.pret_eveniment, s.pret_sala + e.pret_eveniment AS "Cost total"
+    from client c JOIN eveniment e ON
+        e.id_client = c.id_client
+    LEFT JOIN sala s ON
+        s.id_sala = e.id_sala
+    
+    
+-- Totalul incasarilor estimate pentru restaurantul 1 pana la finalul anului 2023
+select sum(s.pret_sala) "Sala", sum(e.pret_eveniment) "Eveniment", sum(s.pret_sala + e.pret_eveniment) AS "Incasari pentru Manhattan in anul 2023"
+    from eveniment e JOIN sala s ON
+        e.id_sala = s.id_sala
+    LEFT JOIN restaurant r ON
+        r.id_restaurant = s.id_restaurant
+    where e.data_eveniment BETWEEN to_date('01.01.2022', 'DD.MM.YYYY') AND to_date('31.12.2023', 'DD.MM.YYYY') AND r.id_restaurant = 1;
+ 
+-- Select angajati ai restaurantului x per evenimentul y
+select e.id_eveniment, a.id_angajat, a.nume_angajat, a.prenume_angajat, a.functie, e.data_eveniment, e.nume_eveniment
+    from angajat a JOIN angajati_per_eveniment ae ON
+        a.id_angajat = ae.id_angajat
+    LEFT JOIN eveniment e ON
+        ae.id_eveniment = e.id_eveniment
+    LEFT JOIN restaurant r ON
+        a.id_restaurant = r.id_restaurant
+    where r.id_restaurant = 1 and e.id_eveniment = 1;
+
+
+-- UPDATE
+
+update eveniment
+    set data_eveniment = DATE '2025-05-29'
+    where id_eveniment = 4;   
+select * from eveniment;
+
+update client
+    set telefon_client = '0752674521'
+    where nume_client = 'Anghel';    
+select * from client;
+
+update angajat
+    set functie = 'Manager'
+    where id_angajat = 1;
+select * from angajat;
+
+
+-- UPDATE CORELAT PT NR_PERSOANE < NR_LOCURI DIN SALA
+select * from eveniment;
+update eveniment
+    set eveniment.nr_persoane = (select eveniment.nr_persoane + 10 from eveniment e, sala s
+    where (e.nr_persoane + 10) <= s.nr_locuri and e.id_sala = s.id_sala and e.id_eveniment = 1);
+    
+select * from eveniment;
+
+-- DELETE
+
+delete from restaurant 
+    where nume_restaurant = 'Polizu';
+select * from restaurant;
+
+-- Stergere eveniment     
+delete from eveniment
+    where id_eveniment = 2;
+select * from eveniment;
+
+-- Incerc sa selectez angajatii per evenimentul sters: no rows selected
+select e.id_eveniment, a.id_angajat, a.nume_angajat, a.prenume_angajat, a.functie, e.data_eveniment, e.nume_eveniment
+    from angajat a JOIN angajati_per_eveniment ae ON
+        a.id_angajat = ae.id_angajat
+    LEFT JOIN eveniment e ON
+        ae.id_eveniment = e.id_eveniment
+    where ae.id_eveniment = 2; 
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="Trg3" directorySegmentName="seg_0" id="9BD6CACE-15A6-A5F6-96D0-05FC35362C0C">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 11:47:49 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<actions>INSERT, UPDATE</actions>
+<body><![CDATA[BEGIN
+	IF( :new.Data_nastere_client >= TO_DATE('2004-12-01', 'yyyy-mm-dd' ))
+	THEN
+		RAISE_APPLICATION_ERROR( -20001, 'Data invalida: ' || TO_CHAR( :new.Data_nastere_client, 'DD.MM.YYYY HH24:MI:SS' ) || ' trebuie sa fie mai mica decat 2004-12-01 pentru a fi clientul major.' );
+	END IF;
+END;
+]]></body>
+<triggerTime>BEFORE</triggerTime>
+<table>7CF8C4FD-CAC7-0037-7A62-4204B12F7B0F</table>
+</TriggerOraclev10g>

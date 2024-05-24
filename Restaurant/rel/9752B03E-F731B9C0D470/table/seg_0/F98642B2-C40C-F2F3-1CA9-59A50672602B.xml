@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F98642B2-C40C-F2F3-1CA9-59A50672602B" name="RESTAURANT">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<generatorID>594EC778-0832-DC57-6768-530D7B08651E</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id_restaurant" id="3F58ED89-F901-3EEB-3E59-E625CF0F26B5">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<generatorID>FC17BDBF-095B-15FB-699B-3C8FACF0D35C</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementGenerateTrigger>false</autoIncrementGenerateTrigger>
+</Column>
+<Column name="Nume_restaurant" id="43787E18-3E78-610E-33E7-1114758736D5">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<generatorID>A5488712-95AE-7B0D-A3B0-1D17E9F14E41</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<constraintName>Nume_restaurant_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(Nume_restaurant)&gt;1"/>
+</checkConstraint>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Adresa_restaurant" id="18C2F386-96E7-0BD2-C3E3-988F0065BF2B">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<generatorID>BDA49B0E-7770-8C81-F1A3-6B153ECFFEC5</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Telefon_restaurant" id="D17B8BCE-F496-3154-91CF-BF981950678A">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<generatorID>1EB6BE3C-7B90-E8B3-A62E-23CB64FF9A83</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<constraintName>Telefon_restaurant_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="regexp_like(Telefon_restaurant, &apos;^([0-9]){10}$&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nr_sali" id="F3D1D8A0-14BF-FC4E-F2E2-38EE98A7F3A1">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<generatorID>6EEC8E86-7625-1DD3-4C41-C7A58CDE07B3</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<constraintName>RESTAURANT_Nr_sali_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="Nr_sali&gt;0"/>
+</checkConstraint>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="499FDE01-D5F5-D976-2A21-11224A15BCF0" name="RESTAURANT_PK">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<generatorID>2B25716D-2FCE-FB63-D52C-E92F1640F22C</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3F58ED89-F901-3EEB-3E59-E625CF0F26B5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A0865D86-F7A4-E1BA-D075-0B6831A80FF6" name="Restaurant_adresa_telefon_UK">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<generatorID>B008FB05-CCA1-C24E-152B-0834617F32E3</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="18C2F386-96E7-0BD2-C3E3-988F0065BF2B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

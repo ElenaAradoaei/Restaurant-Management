@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="45DB2A50-78F7-650A-3B1C-7330C5BDEE89" containerWithKeyObject="3C0BA7D9-E79D-BBF5-5A65-7E373C1605CD" localFKIndex="FED762BC-7600-DAB8-2DA3-6D4E5EAF817D" name="angajat_angEv_fk">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<generatorID>5DE16AE7-3A76-B15F-3B1B-A1492BB11CBD</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<referredTableLongName>ANGAJAT</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>0AA8CB0D-FCFF-AECA-977E-C42F02559F66</referredTableID>
+<keyObject>4C79F06D-6C19-79DC-7FD7-1849D0A1C9A5</keyObject>
+<referredKeyID>4C79F06D-6C19-79DC-7FD7-1849D0A1C9A5</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Id_angajat</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

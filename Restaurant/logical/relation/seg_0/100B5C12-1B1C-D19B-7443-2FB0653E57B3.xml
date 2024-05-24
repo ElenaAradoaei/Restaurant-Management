@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="eveniment_angEv_fk" directorySegmentName="seg_0" id="100B5C12-1B1C-D19B-7443-2FB0653E57B3">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-02 12:03:49 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<engineerTo>
+<item key="C9D201E3-1829-A4C6-8550-93D455193D7D" value="true"/>
+</engineerTo>
+<sourcePk>360620D4-3356-B066-F510-5C1F2F326C8C</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>are alocati</nameOnSource>
+<nameOnTarget>sunt alocati</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>993F1CAC-2245-6105-6189-B0FC1FB1AD15</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>6418A8EA-A242-6E64-EDBE-49B575A1BDB9</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

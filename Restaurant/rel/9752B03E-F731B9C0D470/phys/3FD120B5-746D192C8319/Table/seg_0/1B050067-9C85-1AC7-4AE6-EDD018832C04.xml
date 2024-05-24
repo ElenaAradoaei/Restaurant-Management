@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="SALA" directorySegmentName="seg_0" id="1B050067-9C85-1AC7-4AE6-EDD018832C04">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 11:44:42 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="Nr_locuri" id="105FA3CC-8A76-36EF-9467-2FA0450401DF">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 11:44:42 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Pret_sala" id="8A123D85-33A2-166D-8C24-0DDAE6AEA8E9">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 11:44:42 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Id_sala" id="9493619C-EC3A-4DE2-C58E-0523F770CF72">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 11:44:42 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+<notnullConstraintnameChanged>true</notnullConstraintnameChanged>
+</ColumnProxy>
+<ColumnProxy name="Id_restaurant" id="A411089C-50A1-ABC9-EE68-A724C0817E25">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 11:44:42 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="restaurant_sala_fk" id="8645DAEA-5DBB-8671-5D14-11D26E991646">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 11:44:42 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="SALA_PK" id="A9EBE2D2-AAB3-8EA1-8717-1170550B9C25">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 11:44:42 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

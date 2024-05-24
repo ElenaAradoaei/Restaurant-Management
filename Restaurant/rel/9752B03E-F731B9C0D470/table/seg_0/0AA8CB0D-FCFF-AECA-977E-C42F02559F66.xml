@@ -1,0 +1,183 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0AA8CB0D-FCFF-AECA-977E-C42F02559F66" name="ANGAJAT">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<generatorID>9A71DCCE-4D7E-5C27-8774-0B6FE8F6A6D9</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id_angajat" id="CC8B4524-2A55-9EF4-BB72-468BAC538468">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<generatorID>786669D2-B445-37F4-7797-BD55A43B7F44</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementGenerateTrigger>false</autoIncrementGenerateTrigger>
+</Column>
+<Column name="Nume_angajat" id="4C3D4BB4-76D7-5222-B9D5-861BCE363B1A">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<generatorID>0B08C18A-199E-C0ED-793C-13669EC59B87</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<constraintName>Nume_angajat_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="regexp_like(Nume_angajat,&apos;^[A-Za-z&apos;&apos;-]+$&apos;) and length(Nume_angajat)&gt;1"/>
+</checkConstraint>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Prenume_angajat" id="458A65B1-65CD-124A-E213-51F050AF0EFF">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<generatorID>1814543F-816C-E09A-F092-FE2157DF0728</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<constraintName>Prenume_angajat_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="regexp_like(Prenume_angajat,&apos;^[A-Za-z&apos;&apos;-]+$&apos;) and length(Prenume_angajat)&gt;1"/>
+</checkConstraint>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CNP_angajat" id="06B338F6-AE77-9DE9-1C8C-57BE770684EB">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<generatorID>858A8B01-83F7-18D0-D474-F2754932C664</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<constraintName>CNP_angajat_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>13</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(CNP_angajat)=13"/>
+</checkConstraint>
+<ownDataTypeParameters>,13,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Telefon_angajat" id="E5E8FE5E-B36C-72CD-0C63-67E8DB63857E">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<generatorID>B0057BFA-EEC2-6D2B-D05A-7C13DC23BCF9</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<constraintName>Telefon_angajat_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="regexp_like(Telefon_angajat, &apos;^([0-9]){10}$&apos;) "/>
+</checkConstraint>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Functie" id="2A4998BB-4CC9-42EF-B4C2-1E7039AC4ACD">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<generatorID>27D47895-C199-A0EC-824F-E3B14D4D49A7</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<constraintName>ANGAJAT_Functie_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="(regexp_like(Functie,&apos;^[A-Za-z&apos;&apos;-]+$&apos;)) and (length(Functie)&gt;1)"/>
+</checkConstraint>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Id_restaurant" id="05278DCA-0BDE-8304-0A90-21358362B997">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<generatorID>1451ED15-7F2B-BFC6-9E84-CA23C59BF91A</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7654CE49-4605-E3C6-E513-87CFA5D3AD94" referredColumn="3F58ED89-F901-3EEB-3E59-E625CF0F26B5"/>
+</associations>
+</Column>
+<Column name="Data_nastere_angajat" id="0215EDD2-0DF3-5769-7EBA-A146CFC22234">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<generatorID>D4ED5498-D943-B9C0-CB49-A234750E4D1C</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Adresa_angajat" id="CD1EC300-244A-C78F-50EA-8D77EBBEDE3A">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<generatorID>E004B879-6FD5-6F10-C271-2E7CAB7E24E2</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4C79F06D-6C19-79DC-7FD7-1849D0A1C9A5" name="ANGAJAT_PK">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<generatorID>4AA7705B-3F4E-9AB0-21F1-AF67FFE2D380</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CC8B4524-2A55-9EF4-BB72-468BAC538468"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="28D5D41C-1FE9-FC0D-C997-5355A3C27AA5" name="Angajat_CNP_angajat_UN">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<generatorID>2551DB00-7FA1-A31C-BDB7-305C87604989</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="06B338F6-AE77-9DE9-1C8C-57BE770684EB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3218F22E-2C12-A1EA-305A-E94BC960D371" name="restaurant_angajat_fk">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<generatorID>6F003648-5E25-672D-6BB2-EE751AB00AD0</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="05278DCA-0BDE-8304-0A90-21358362B997"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

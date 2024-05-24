@@ -1,0 +1,177 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="ECF01618-4440-F1A0-B37E-724CF0138F70" name="EVENIMENT">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<generatorID>993F1CAC-2245-6105-6189-B0FC1FB1AD15</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id_eveniment" id="5CDF1930-46AF-A0D9-F499-1BB9EA4541A8">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<generatorID>4504A7A3-7E5A-0768-1768-4AE193893E32</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementGenerateTrigger>false</autoIncrementGenerateTrigger>
+</Column>
+<Column name="Data_eveniment" id="DD15D5BA-7E4F-CC3C-3B1B-EE205362FBFA">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<generatorID>82EF2976-C369-BDA7-B2DF-AE5C26F16447</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nr_persoane" id="C0C08CBD-A402-15F8-13D5-E219037C8FC0">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<generatorID>5B5B6BB4-3E78-C978-8217-B60A11BDF979</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<constraintName>Nr_persoane_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="Nr_persoane&gt;10"/>
+</checkConstraint>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nume_eveniment" id="B7142856-D263-8422-3555-5BC904C4A88D">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<generatorID>CC0C0687-C2C1-ADD0-C8A4-204856B70E0F</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<constraintName>Nume_eveniment_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="regexp_like(Nume_eveniment,&apos;^[A-Za-z&apos;&apos;-]+$&apos;) and length(Nume_eveniment)&gt;1"/>
+</checkConstraint>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Pret_eveniment" id="B652DF9A-3113-3426-B693-389000ECA66F">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<generatorID>6EFA1003-777E-BF45-05B0-982A24CDF994</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<constraintName>Pret_eveniment_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="Pret_eveniment&gt;0"/>
+</checkConstraint>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Id_client" id="20F442A7-A2C5-AE4D-95FD-624C417D740D">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<generatorID>A4D050DF-302B-2E60-DE5A-46DE9120A187</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5277D3FA-1192-835F-754A-D406FA347F65" referredColumn="A2882B3B-A023-7D93-2D0C-D36483FBF514"/>
+</associations>
+</Column>
+<Column name="Id_sala" id="24228121-FAEE-FA58-5093-24F0821C40B0">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<generatorID>973D3982-4DAD-D836-F8F2-0D0AF7FED42F</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F070AB89-D802-B008-F259-B228DE4C5B9E" referredColumn="9493619C-EC3A-4DE2-C58E-0523F770CF72"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7CF9BCE5-7897-54CF-DABB-5DDC66D30E07" name="EVENIMENT_PK">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<generatorID>360620D4-3356-B066-F510-5C1F2F326C8C</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5CDF1930-46AF-A0D9-F499-1BB9EA4541A8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2A0F9AF4-2017-2A9A-B277-345E9740E433" name="Eveniment_data_sala_UK">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<generatorID>05AA0DE7-4138-CC74-BBC6-71D534A40ACC</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="24228121-FAEE-FA58-5093-24F0821C40B0"/>
+<colUsage columnID="DD15D5BA-7E4F-CC3C-3B1B-EE205362FBFA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E20B096E-947C-BF20-D13C-23472F284538" name="EVENIMENT__IDX">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>023FC110-165C-DF66-70B1-18F39935EBC5</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="20F442A7-A2C5-AE4D-95FD-624C417D740D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="29528A9F-3A01-78D2-C816-1BC9BE0A9FAB" name="client_eveniment">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<generatorID>023FC110-165C-DF66-70B1-18F39935EBC5</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="20F442A7-A2C5-AE4D-95FD-624C417D740D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="45A2CE48-4409-A554-1017-61E1664CD130" name="sala_eveniment_fk">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-23 10:47:24 UTC</createdTime>
+<generatorID>AE9A1E9C-AD4C-DDB7-8CEC-2C33CE2C9994</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="24228121-FAEE-FA58-5093-24F0821C40B0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

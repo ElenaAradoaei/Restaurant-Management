@@ -1,0 +1,95 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C766C4DD-45AF-6431-965C-109145741CA7" name="SALA">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-11-25 08:56:37 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<engineerTo>
+<item key="14162682-AC55-53B2-D32F-A2BFFADC7710" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Id_sala" id="22FFC05B-5241-39C5-9A91-3FA578B52DCF">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-11-25 08:57:07 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<engineerTo>
+<item key="14162682-AC55-53B2-D32F-A2BFFADC7710" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nr_locuri" id="E48E8851-69AD-60F6-0363-AC7AD53FDE88">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-11-25 08:57:49 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<engineerTo>
+<item key="14162682-AC55-53B2-D32F-A2BFFADC7710" value="true"/>
+</engineerTo>
+<constraintName>Nr_locuri_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="Nr_locuri&gt;10"/>
+</checkConstraint>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Pret_sala" id="B6F89AD6-FA73-3DB0-37DB-BEF6A864F49A">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-11-25 08:58:11 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<engineerTo>
+<item key="14162682-AC55-53B2-D32F-A2BFFADC7710" value="true"/>
+</engineerTo>
+<constraintName>Pret_sala_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="Pret_sala&gt;0"/>
+</checkConstraint>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id_restaurant" id="71C5AB9D-54E3-4C0C-69B8-35E92FBBE06F">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-02 11:40:57 UTC</createdTime>
+<generatorID>EA7D695F-EE32-2CC1-FEAE-EDA80AC91133</generatorID>
+<ownerDesignName>Restaurant</ownerDesignName>
+<engineerTo>
+<item key="14162682-AC55-53B2-D32F-A2BFFADC7710" value="true"/>
+</engineerTo>
+<referedAttribute>FC17BDBF-095B-15FB-699B-3C8FACF0D35C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5F416C5B-DB43-454F-98E2-9BAF70D11DA4" name="SALA PK">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-11-25 08:57:45 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<engineerTo>
+<item key="14162682-AC55-53B2-D32F-A2BFFADC7710" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>22FFC05B-5241-39C5-9A91-3FA578B52DCF</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

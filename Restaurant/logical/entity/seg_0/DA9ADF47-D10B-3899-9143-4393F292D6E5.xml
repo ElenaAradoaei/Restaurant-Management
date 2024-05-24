@@ -1,0 +1,141 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="DA9ADF47-D10B-3899-9143-4393F292D6E5" name="CLIENT">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-11-25 09:15:23 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<engineerTo>
+<item key="A20A8ACB-E3B1-77B3-3E1B-E7547FD66500" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Id_client" id="4F07F1FD-F05D-1E82-EC98-E28BE2EFD613">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-11-25 09:15:33 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<engineerTo>
+<item key="A20A8ACB-E3B1-77B3-3E1B-E7547FD66500" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nume_client" id="EFFDAAEA-B98A-5B35-23CD-D27C79CC2361">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-11-25 09:16:41 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<engineerTo>
+<item key="A20A8ACB-E3B1-77B3-3E1B-E7547FD66500" value="true"/>
+</engineerTo>
+<constraintName>Nume_client_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="regexp_like(Nume_client,&apos;^[A-Za-z&apos;&apos;-]+$&apos;) and length(Nume_client)&gt;1"/>
+</checkConstraint>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Prenume_client" id="7C8D88C6-DF79-8D59-EB06-B4C19C74DBA4">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-11-25 09:17:00 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<engineerTo>
+<item key="A20A8ACB-E3B1-77B3-3E1B-E7547FD66500" value="true"/>
+</engineerTo>
+<constraintName>Prenume_client_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="regexp_like(Prenume_client,&apos;^[A-Za-z&apos;&apos;-]+$&apos;) and length(Prenume_client)&gt;1"/>
+</checkConstraint>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CNP_client" id="D17E5726-A27A-B8D5-1B1A-A815DF0B05B3">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-11-25 09:18:48 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<engineerTo>
+<item key="A20A8ACB-E3B1-77B3-3E1B-E7547FD66500" value="true"/>
+</engineerTo>
+<constraintName>CNP_client_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>13</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(CNP_client)=13"/>
+</checkConstraint>
+<ownDataTypeParameters>,13,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Telefon_client" id="39D0E744-F762-0448-FC5A-BA8FA1AC3653">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-11-25 09:17:24 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<engineerTo>
+<item key="A20A8ACB-E3B1-77B3-3E1B-E7547FD66500" value="true"/>
+</engineerTo>
+<constraintName>Telefon_client_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="regexp_like(Telefon_client, &apos;^([0-9]){10}$&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Data_nastere_client" id="05C0D11F-F62C-4789-2389-4FF24E38EC5B">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-12-02 11:54:50 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<engineerTo>
+<item key="A20A8ACB-E3B1-77B3-3E1B-E7547FD66500" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="89325050-7CD1-EA47-0BE3-99E94081FC22" name="CLIENT PK">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-11-25 09:16:37 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="A20A8ACB-E3B1-77B3-3E1B-E7547FD66500" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>4F07F1FD-F05D-1E82-EC98-E28BE2EFD613</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="13ABDE99-A49B-4887-6F0A-BF09E4AE6BAC" name="Client_CNP_client_UN">
+<createdBy>My Computer</createdBy>
+<createdTime>2022-11-25 09:19:09 UTC</createdTime>
+<ownerDesignName>Restaurant</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="A20A8ACB-E3B1-77B3-3E1B-E7547FD66500" value="false"/>
+</engineerTo>
+<newElementsIDs>D17E5726-A27A-B8D5-1B1A-A815DF0B05B3</newElementsIDs>
+<usedAttributes>
+<attributeRef>D17E5726-A27A-B8D5-1B1A-A815DF0B05B3</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
